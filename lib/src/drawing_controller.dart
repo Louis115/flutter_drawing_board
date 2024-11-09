@@ -466,7 +466,7 @@ class DrawingController extends ChangeNotifier {
 
     super.dispose();
   }
-
+}
 /// 画布刷新控制器
 class RePaintNotifier extends ChangeNotifier {
   void _refresh() {
