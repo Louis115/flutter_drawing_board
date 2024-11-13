@@ -446,27 +446,27 @@ class DrawingController extends ChangeNotifier {
   }
 
   /// 销毁控制器
- @override
+  @override
   void dispose() {
-    if (!_mounted) return;
+    if (!_mounted) {
+      return;
+    }
 
-    // Dispose notifiers
     drawConfig.dispose();
     realPainter?.dispose();
     painter?.dispose();
 
-    // Clear lists and references
     _history.clear();
     _currentIndex = 0;
     _startPoint = null;
     cachedImage = null;
 
-    // Mark controller as disposed
     _mounted = false;
 
     super.dispose();
   }
 }
+
 /// 画布刷新控制器
 class RePaintNotifier extends ChangeNotifier {
   void _refresh() {
