@@ -455,6 +455,10 @@ class DrawingController extends ChangeNotifier {
     drawConfig.dispose();
     realPainter?.dispose();
     painter?.dispose();
+    _history.clear();
+    _currentIndex = 0;
+    _startPoint = null;
+    cachedImage = null;
 
     _mounted = false;
 
