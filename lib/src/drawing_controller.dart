@@ -461,7 +461,6 @@ class DrawingController extends ChangeNotifier {
     cachedImage = null;
 
     _mounted = false;
-
     super.dispose();
   }
 }
